@@ -1,6 +1,13 @@
-#include "../ft_putchar.h"
+#include <unistd.h>
 
+int ft_put_char(char c);
 void ft_print_comb(void);
+
+int ft_putchar(char c)
+{
+  write(1, &c, 1);
+  return(0);
+}
 
 void ft_print_comb()
 {
@@ -55,10 +62,4 @@ void ft_print_comb()
       i++;
     }
   ft_putchar('\n');
-}
-
-int main()
-{
-  ft_print_comb();
-  return(0);
 }

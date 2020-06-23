@@ -1,51 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strupcase.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 11:56:16 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/23 13:04:00 by trhoda           ###   ########.fr       */
+/*   Created: 2020/06/23 10:37:15 by trhoda            #+#    #+#             */
+/*   Updated: 2020/06/23 11:04:45 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-char *ft_strcpy(char *dest, char *src);
-
-void ft_putchar(char n)
-{
-	write(1, &n, 1);
-}
+char *ft_strlowcase(char *str);
 
 int main()
 {
-	char d[10];
-	int i;
-	char c[10] = "HelloWorl";
-	ft_strcpy(d, c);
-	i = 0;
-	while (d[i] != '\0')
-	{
-		ft_putchar(d[i]);
-		i++;
-	}
+	char str[10] = "HellOworl";
+	char *x;
+	x = ft_strlowcase(str);
+	write(1, x, 10);
 	return 0;
 }
 
-
-char *ft_strcpy(char *dest, char *src)
+char *ft_strlowcase(char *str)
 {
 	int i;
-
 	i = 0;
-	while (src[i] != '\0')
+	while (str[i] != '\0')
 	{
-		dest[i] = src[i];
+		if (str[i] >= 'A' && str[i] <= 'Z')
+		{
+			str[i] -= ('A' - 'a');
+		}
 		i++;
 	}
-	dest[i] = '\0';
-
-	return dest;
+	return str;
 }

@@ -1,51 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/22 11:56:16 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/23 13:04:00 by trhoda           ###   ########.fr       */
+/*   Created: 2020/06/23 11:53:37 by trhoda            #+#    #+#             */
+/*   Updated: 2020/06/23 13:02:05 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-char *ft_strcpy(char *dest, char *src);
-
-void ft_putchar(char n)
-{
-	write(1, &n, 1);
-}
+int ft_str_is_lowercase(char *str);
 
 int main()
 {
-	char d[10];
+	char str[12] = "helloWorld";
 	int i;
-	char c[10] = "HelloWorl";
-	ft_strcpy(d, c);
-	i = 0;
-	while (d[i] != '\0')
-	{
-		ft_putchar(d[i]);
-		i++;
-	}
+	i = ft_str_is_lowercase(str);
+	printf("%d\n", i);
 	return 0;
 }
 
-
-char *ft_strcpy(char *dest, char *src)
+int ft_str_is_lowercase(char *str)
 {
 	int i;
-
 	i = 0;
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
+	char c;
 
-	return dest;
+	while (str[i] != '\0')
+	{
+		c = str[i++];
+		if (c < 'a' || c > 'z')
+		{
+			return 0;
+		}
+	}
+	return 1;
 }

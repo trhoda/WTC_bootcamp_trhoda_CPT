@@ -6,29 +6,18 @@
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 11:53:37 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/23 13:10:56 by trhoda           ###   ########.fr       */
+/*   Updated: 2020/06/24 17:51:05 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int ft_str_is_printable(char *str);
-
-int main()
-{
-	char str[12] = "hello\nWorld";
-	int i;
-	i = ft_str_is_printable(str);
-	printf("%d\n", i);
-	return 0;
-}
 
 int ft_str_is_printable(char *str)
 {
 	int i;
-	i = 0;
 	char c;
-
+	i = 0;
+	
 	while (str[i] != '\0')
 	{
 		c = str[i++];

@@ -6,22 +6,11 @@
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 11:53:37 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/23 13:01:08 by trhoda           ###   ########.fr       */
+/*   Updated: 2020/06/24 17:50:15 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 int ft_str_is_uppercase(char *str);
-
-int main()
-{
-	char str[12] = "helloWorld";
-	int i;
-	i = ft_str_is_uppercase(str);
-	printf("%d\n", i);
-	return 0;
-}
 
 int ft_str_is_uppercase(char *str)
 {

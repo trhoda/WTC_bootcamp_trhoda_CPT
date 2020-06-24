@@ -1,27 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strupcase.c                                     :+:      :+:    :+:   */
+/*   ft_strcapitalize.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/23 10:37:15 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/23 11:09:49 by trhoda           ###   ########.fr       */
+/*   Updated: 2020/06/24 17:47:43 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
 char *ft_strcapitalize(char *str);
-
-int main()
-{
-	char str[18] = "tEsts arE lame AF";
-	char *x;
-	x = ft_strcapitalize(str);
-	write(1, x, 18);
-	return 0;
-}
 
 char *ft_strcapitalize(char *str)
 {

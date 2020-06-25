@@ -1,42 +1,60 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_params.c                                  :+:      :+:    :+:   */
+/*   ft_concat_params.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/06/25 08:20:51 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/25 15:39:25 by trhoda           ###   ########.fr       */
+/*   Created: 2020/06/25 16:31:12 by trhoda            #+#    #+#             */
+/*   Updated: 2020/06/25 17:43:58 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdlib.h>
+#include <stdio.h>
 
-int ft_putchar(char c);
+char *ft_concat_param(int argc, char **argv);
 
 int main(int argc, char **argv)
 {
+
+	return 0;
+}
+
+char *ft_concat_param(int argc, char **argv)
+{
 	int i;
 	int j;
-	
-	if (!argc) return 0;
-	i = argc - 1;
-	j = 0;
-	while (i > 0)
+	int len;
+	int index;
+	char *concat;
+
+	i = 1;
+	len = 1;
+
+	while (i < argc)
+	{
+		j = -1;
+		while (argv[i][++j] != '\0');
+		len += j;
+		i++;
+	}
+
+	concat = (char*)malloc(len*sizeof(char));
+
+	i = 1;
+	index = 0;
+	while (i < argc)
 	{
 		j = 0;
 		while (argv[i][j] != '\0')
 		{
-			ft_putchar(argv[i][j++]);
+			concat[index++] = argv[i][j];
 		}
-		ft_putchar('\n');
-		i--;
+		if (index == len-1) concat[index++] = '\n';
+		else concat[index] = '\0';
+		i++;
 	}
-	return 0;
-}
 
-int ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return 0;
+	return concat;
 }

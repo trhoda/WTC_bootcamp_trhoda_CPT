@@ -6,7 +6,7 @@
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/25 08:20:51 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/25 08:30:10 by trhoda           ###   ########.fr       */
+/*   Updated: 2020/06/25 15:38:01 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,13 @@
 
 int ft_putchar(char c);
 
-int main()
+int main(int argc, char **argv)
 {
 	int i;
 	int j;
 	
 	if (!argc) return 0;
-	i = argc;
+	i = i;
 	j = 0;
 	while (i < argc)
 	{
@@ -29,7 +29,7 @@ int main()
 		{
 			ft_putchar(argv[i][j++]);
 		}
-		fy_putchar('\n');
+		ft_putchar('\n');
 		i++;
 	}
 	return 0;

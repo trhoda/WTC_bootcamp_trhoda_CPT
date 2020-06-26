@@ -1,5 +1,20 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_split_whitespaces.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/26 15:33:09 by trhoda            #+#    #+#             */
+/*   Updated: 2020/06/26 15:34:03 by trhoda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdlib.h>
+
+
+
 
 int ft_putchar(char c)
 {
@@ -13,6 +28,7 @@ void		ft_putstr(char *str)
     i = 0;
     while (str[i] != '\0') ft_putchar(str[i++]);
 }
+
 int		ft_word_len(int index, char *str)
 {
 	int		i;

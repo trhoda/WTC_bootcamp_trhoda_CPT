@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_print_words_table.c                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/26 15:32:56 by trhoda            #+#    #+#             */
+/*   Updated: 2020/06/26 15:32:58 by trhoda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <unistd.h>
 #include <stdlib.h>
 
@@ -16,10 +28,9 @@ void ft_putstr(char *str)
 
 void ft_print_words_table(char **tab)
 {
-    res = ft_split_whitespaces("hello fucking world");
-    while (*res != 0)
+    while (*tab != 0)
     {
-        ft_putstr(*res);
+        ft_putstr(*tab);
         ft_putchar('\n');
         res++;
     }

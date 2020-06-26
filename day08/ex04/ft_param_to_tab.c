@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_param_to_tab.c                                  :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2020/06/26 15:49:53 by trhoda            #+#    #+#             */
+/*   Updated: 2020/06/26 15:57:34 by trhoda           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "ft_stock_par.h"
 
-int					ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
     int i;
 
@@ -10,7 +22,7 @@ int					ft_strlen(char *str)
     return (i);
 }
 
-char				*ft_strdup(char *src)
+char *ft_strdup(char *src)
 {
     char	*dest;
     int		i;

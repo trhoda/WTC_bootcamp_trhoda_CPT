@@ -6,7 +6,7 @@
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 15:34:27 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/26 15:34:44 by trhoda           ###   ########.fr       */
+/*   Updated: 2020/06/26 16:00:51 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,27 +28,6 @@
 char *ft_concat_param(int argc, char **argv);
 
 int ft_putchar(char c);
-
-int ft_putchar(char c)
-{
-	write(1, &c, 1);
-	return 0;
-}
-
-int main(int argc, char **argv)
-{
-	char *dest;
-	int i;
-
-	i = 0;
-	dest = ft_concat_param(argc, argv);
-
-	while (dest[i] != '\0')
-	{
-		ft_putchar(dest[i++]);
-	}
-	return 0;
-}
 
 char *ft_concat_param(int argc, char **argv)
 {

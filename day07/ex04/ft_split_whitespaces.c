@@ -6,30 +6,27 @@
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 15:33:09 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/26 15:34:03 by trhoda           ###   ########.fr       */
+/*   Updated: 2020/06/26 16:04:57 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
+int ft_putchar(char c);
+void ft_putstr(char *str)
+int	ft_word_len(int index, char *str)
+int	ft_word_count(char *str)
+char **ft_split_whitespaces(char *str)
 
 
-
-
-int ft_putchar(char c)
-{
-    write(1, &c, 1);
-    return 0;
-}
-
-void		ft_putstr(char *str)
+void ft_putstr(char *str)
 {
     int i;
     i = 0;
     while (str[i] != '\0') ft_putchar(str[i++]);
 }
 
-int		ft_word_len(int index, char *str)
+int	ft_word_len(int index, char *str)
 {
 	int		i;
 
@@ -41,7 +38,7 @@ int		ft_word_len(int index, char *str)
 	return (index - i);
 }
 
-int		ft_word_count(char *str)
+int	ft_word_count(char *str)
 {
 	int		count;
 	int		i;
@@ -58,13 +55,13 @@ int		ft_word_count(char *str)
 	return (count + 1);
 }
 
-char	**ft_split_whitespaces(char *str)
+char **ft_split_whitespaces(char *str)
 {
 	char	**tab;
 	int		i;
 	int		j;
 	int		k;
-  int len;
+  	int len;
 
 	i = 0;
 	j = 0;
@@ -72,9 +69,8 @@ char	**ft_split_whitespaces(char *str)
 	while (str[j])
 	{
 		k = 1;
-		while (str[j] == '\n' ||  str[j] == '\t' || str[j] == ' ' || str[j] == '\0')
-			j++;
-    len = ft_word_len(j, str);
+		while (str[j] == '\n' ||  str[j] == '\t' || str[j] == ' ' || str[j] == '\0') j++;
+    	len = ft_word_len(j, str);
 		*(tab + i) = (char *)malloc((len + 1) * sizeof(char));
 		while (!(str[j] == '\n' ||  str[j] == '\t' || str[j] == ' ' || str[j] == '\0'))
 		{
@@ -87,15 +83,3 @@ char	**ft_split_whitespaces(char *str)
 	return (&tab[0]);
 }
 
-int   main(void)
-{
-    char** res;
-    res = ft_split_whitespaces("hello fucking world");
-    while (*res != 0)
-    {
-        ft_putstr(*res);
-        ft_putstr(" | ");
-        res++;
-    }
-	return 0;
-}

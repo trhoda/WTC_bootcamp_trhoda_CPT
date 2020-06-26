@@ -6,18 +6,17 @@
 /*   By: trhoda <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/06/26 15:32:56 by trhoda            #+#    #+#             */
-/*   Updated: 2020/06/26 15:32:58 by trhoda           ###   ########.fr       */
+/*   Updated: 2020/06/26 16:06:14 by trhoda           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdlib.h>
 
-int ft_putchar(char c)
-{
-    write(1, &c, 1);
-    return 0;
-}
+int ft_putchar(char c);
+void ft_putstr(char c);
+void ft_print_words_table(char **tab);
+
 
 void ft_putstr(char *str)
 {
@@ -35,3 +34,4 @@ void ft_print_words_table(char **tab)
         res++;
     }
 }
+
